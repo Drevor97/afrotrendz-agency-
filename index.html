@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfroTrendz — Websites, Logos &amp; Google Visibility for KwaZulu-Natal Businesses</title>
+<meta name="description" content="AfroTrendz builds websites, logos and Google Business Profiles for businesses across KwaZulu-Natal. Fixed prices, fast turnaround, local support.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Karla:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#221B16;
+    --sand:#F1E6D2;
+    --paper:#FBF6EC;
+    --rust:#B85C2C;
+    --rust-dark:#9A4A22;
+    --indigo:#17233F;
+    --indigo-light:#243456;
+    --teal:#16746B;
+    --gold:#DDA430;
+    --line: rgba(34,27,22,0.14);
+    --line-light: rgba(251,246,236,0.18);
+    --radius: 4px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    font-size:16px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+
+  h1,h2,h3,.display{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    line-height:1.05;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    font-weight:600;
+  }
+
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(241,230,210,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+    max-width:1180px; margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces', serif;
+    font-weight:800;
+    font-size:1.3rem;
+    letter-spacing:-0.01em;
+    display:flex; align-items:baseline; gap:8px;
+  }
+  .logo .dot{color:var(--rust); font-size:1.3rem;}
+  .logo .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size:0.62rem; font-weight:600;
+    background:var(--teal); color:var(--paper);
+    padding:2px 6px; border-radius:3px;
+    letter-spacing:0.06em;
+    transform:translateY(-6px);
+  }
+  nav.links{display:flex; gap:28px; align-items:center;}
+  nav.links a{
+    text-decoration:none; font-weight:600; font-size:0.92rem;
+    color:var(--ink); opacity:0.82;
+  }
+  nav.links a:hover{opacity:1;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Karla', sans-serif;
+    font-weight:700; font-size:0.9rem;
+    text-decoration:none;
+    padding:11px 20px;
+    border-radius:var(--radius);
+    border:2px solid var(--ink);
+    transition:transform .15s ease, box-shadow .15s ease;
+    cursor:pointer;
+  }
+  .btn-primary{background:var(--rust); color:var(--paper); border-color:var(--rust);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:3px 4px 0 var(--ink);}
+  .btn-ghost{background:transparent; color:var(--ink);}
+  .btn-ghost:hover{transform:translateY(-2px); box-shadow:3px 4px 0 var(--ink);}
+  .nav-cta{display:flex; gap:10px;}
+  .burger{display:none; background:none; border:none; cursor:pointer;}
+
+  @media (max-width:860px){
+    nav.links{display:none;}
+    .burger{display:block;}
+    .nav-cta .btn-ghost{display:none;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:64px 0 0;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap:40px;
+    align-items:center;
+    padding-bottom:56px;
+  }
+  .hero h1{
+    font-size:clamp(2.3rem, 5.2vw, 3.6rem);
+    margin:18px 0 22px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--rust);
+  }
+  .hero p.lead{
+    font-size:1.08rem;
+    max-width:46ch;
+    opacity:0.85;
+    margin-bottom:28px;
+  }
+  .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+
+  .hero-badge{
+    background:var(--paper);
+    border:2px solid var(--ink);
+    border-radius:8px;
+    padding:22px;
+    box-shadow:6px 6px 0 var(--rust);
+  }
+  .hero-badge .stat{
+    display:flex; justify-content:space-between;
+    padding:10px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:0.9rem;
+  }
+  .hero-badge .stat:last-child{border-bottom:none;}
+  .hero-badge .stat b{font-family:'Fraunces',serif; font-size:1.05rem;}
+
+  @media (max-width:860px){
+    .hero-inner{grid-template-columns:1fr;}
+  }
+
+  /* ---------- TAXI BOARD MARQUEE (signature element) ---------- */
+  .board-strip{
+    background:var(--gold);
+    border-top:3px solid var(--ink);
+    border-bottom:3px solid var(--ink);
+    overflow:hidden;
+    position:relative;
+    padding:14px 0;
+  }
+  .board-strip::before, .board-strip::after{
+    content:"";
+    position:absolute; top:0; bottom:0; width:60px; z-index:2;
+  }
+  .board-track{
+    display:flex;
+    width:max-content;
+    animation:scrollBoard 32s linear infinite;
+  }
+  @keyframes scrollBoard{
+    from{transform:translateX(0);}
+    to{transform:translateX(-50%);}
+  }
+  .board-item{
+    font-family:'JetBrains Mono', monospace;
+    font-weight:700;
+    font-size:1rem;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--ink);
+    padding:0 26px;
+    white-space:nowrap;
+    border-right:2px solid var(--ink);
+    display:flex; align-items:center; gap:10px;
+  }
+  .board-item .pin{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--ink); display:inline-block;
+  }
+
+  /* ---------- TRUST STRIP ---------- */
+  .trust{
+    background:var(--indigo);
+    color:var(--paper);
+    padding:36px 0;
+  }
+  .trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
+  .trust-grid div{
+    font-size:0.92rem;
+    font-weight:600;
+    border-left:2px solid var(--gold);
+    padding-left:14px;
+    opacity:0.92;
+  }
+  @media (max-width:760px){
+    .trust-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- SECTION HEADERS ---------- */
+  section{padding:88px 0;}
+  .sec-head{
+    max-width:640px;
+    margin-bottom:52px;
+  }
+  .sec-head .eyebrow{color:var(--rust); margin-bottom:10px; display:block;}
+  .sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem);}
+  .sec-head p{opacity:0.78; margin-top:14px; font-size:1.02rem;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--paper);}
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:0;
+    border-top:2px solid var(--ink);
+    border-left:2px solid var(--ink);
+  }
+  .service-card{
+    border-right:2px solid var(--ink);
+    border-bottom:2px solid var(--ink);
+    padding:34px 28px;
+    background:var(--paper);
+    transition:background .2s ease;
+  }
+  .service-card:hover{background:var(--sand);}
+  .service-card .icon{
+    width:44px; height:44px;
+    margin-bottom:22px;
+  }
+  .service-card h3{font-size:1.3rem; margin-bottom:12px;}
+  .service-card p{opacity:0.78; font-size:0.95rem; margin-bottom:16px;}
+  .service-card ul{margin:0; padding-left:18px; font-size:0.88rem; opacity:0.85;}
+  .service-card li{margin-bottom:6px;}
+
+  @media (max-width:860px){
+    .service-grid{grid-template-columns:1fr;}
+  }
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--indigo); color:var(--paper);}
+  .process .sec-head p{opacity:0.7;}
+  .process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+  }
+  .step{
+    border-top:2px solid var(--gold);
+    padding-top:18px;
+  }
+  .step .num{
+    font-family:'JetBrains Mono', monospace;
+    color:var(--gold);
+    font-size:0.85rem;
+    font-weight:700;
+  }
+  .step h3{font-size:1.15rem; margin:10px 0 8px; font-family:'Fraunces',serif;}
+  .step p{font-size:0.9rem; opacity:0.75; margin:0;}
+  @media (max-width:860px){
+    .process-grid{grid-template-columns:repeat(2,1fr);}
+  }
+
+  /* ---------- PATTERN DIVIDER (beadwork-inspired triangles) ---------- */
+  .beadline{
+    height:22px;
+    background:
+      linear-gradient(135deg, var(--rust) 25%, transparent 25.5%) 0 0/22px 22px,
+      linear-gradient(-135deg, var(--teal) 25%, transparent 25.5%) 0 0/22px 22px,
+      var(--sand);
+    background-repeat:repeat-x;
+  }
+
+  /* ---------- PACKAGES ---------- */
+  .packages{background:var(--sand);}
+  .pack-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+  .pack-card{
+    background:var(--paper);
+    border:2px solid var(--ink);
+    border-radius:8px;
+    padding:30px 26px;
+    display:flex; flex-direction:column;
+    position:relative;
+  }
+  .pack-card.featured{
+    background:var(--ink);
+    color:var(--paper);
+    box-shadow:6px 6px 0 var(--rust);
+  }
+  .pack-card.featured .price{color:var(--gold);}
+  .pack-card .badge{
+    position:absolute; top:-14px; right:20px;
+    background:var(--rust); color:var(--paper);
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.65rem; font-weight:700;
+    padding:5px 10px; border-radius:20px;
+    letter-spacing:0.05em; text-transform:uppercase;
+  }
+  .pack-card h3{font-size:1.2rem; margin-bottom:6px;}
+  .pack-card .price{
+    font-family:'Fraunces',serif; font-weight:700;
+    font-size:1.7rem; margin:10px 0 4px;
+  }
+  .pack-card .price span{font-size:0.85rem; font-weight:500; opacity:0.7;}
+  .pack-card ul{padding-left:18px; font-size:0.9rem; margin:18px 0; flex-grow:1;}
+  .pack-card li{margin-bottom:8px;}
+  .pack-card .btn{align-self:flex-start;}
+  @media (max-width:900px){
+    .pack-grid{grid-template-columns:1fr; max-width:420px; margin:0 auto;}
+  }
+
+  /* ---------- WHY LOCAL ---------- */
+  .why{
+    background:var(--teal);
+    color:var(--paper);
+  }
+  .why-inner{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:start;
+  }
+  .why h2{font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:18px;}
+  .why-list div{
+    display:flex; gap:14px; margin-bottom:22px;
+  }
+  .why-list .mark{
+    font-family:'Fraunces',serif; font-weight:700;
+    color:var(--gold); font-size:1.1rem;
+  }
+  .why-list p{margin:0; font-size:0.95rem; opacity:0.92;}
+  @media (max-width:860px){ .why-inner{grid-template-columns:1fr;} }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:var(--rust);
+    color:var(--paper);
+    text-align:center;
+  }
+  .contact h2{
+    font-size:clamp(2rem,5vw,3rem);
+    max-width:16ch; margin:0 auto 20px;
+  }
+  .contact p{opacity:0.92; max-width:50ch; margin:0 auto 32px; font-size:1.05rem;}
+  .contact .hero-actions{justify-content:center;}
+  .contact .btn-ghost{border-color:var(--paper); color:var(--paper);}
+  .contact .btn-ghost:hover{box-shadow:3px 4px 0 var(--ink);}
+  .contact .btn-primary{background:var(--ink); border-color:var(--ink);}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--indigo);
+    color:var(--paper);
+    padding:48px 0 28px;
+  }
+  .foot-grid{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px;
+    padding-bottom:28px;
+    border-bottom:1px solid var(--line-light);
+    margin-bottom:20px;
+  }
+  .foot-grid .logo{color:var(--paper);}
+  .foot-towns{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.78rem;
+    opacity:0.65;
+    max-width:420px;
+    line-height:1.8;
+  }
+  .foot-bottom{
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    font-size:0.8rem; opacity:0.6;
+  }
+
+  ::selection{background:var(--gold); color:var(--ink);}
+  :focus-visible{outline:3px solid var(--teal); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <div class="logo">Afro<span class="dot">Trendz</span><span class="tag">KZN</span></div>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#packages" class="btn btn-ghost">Packages</a>
+      <a href="#contact" class="btn btn-primary">Get a free quote</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="eyebrow" style="color:var(--rust)">Web design · Logo design · Google Business Profile · SEO</span>
+      <h1>Get found in <em>KwaZulu-Natal</em> before you get found anywhere else.</h1>
+      <p class="lead">We build websites, logos and Google listings for businesses across KZN — from Durban to the Midlands. Fixed prices, fast turnaround, and a real person on WhatsApp when you need us.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a free quote</a>
+        <a href="#packages" class="btn btn-ghost">See packages</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="stat"><span>Turnaround</span><b>5–7 days</b></div>
+      <div class="stat"><span>Pricing</span><b>Fixed, upfront</b></div>
+      <div class="stat"><span>Reach</span><b>All of KZN</b></div>
+      <div class="stat"><span>Support</span><b>Direct, no call centre</b></div>
+    </div>
+  </div>
+
+  <div class="board-strip" aria-hidden="false" role="img" aria-label="Areas served across KwaZulu-Natal">
+    <div class="board-track">
+      <div class="board-item"><span class="pin"></span>Durban</div>
+      <div class="board-item"><span class="pin"></span>Pietermaritzburg</div>
+      <div class="board-item"><span class="pin"></span>Umhlanga</div>
+      <div class="board-item"><span class="pin"></span>Ballito</div>
+      <div class="board-item"><span class="pin"></span>Pinetown</div>
+      <div class="board-item"><span class="pin"></span>Richards Bay</div>
+      <div class="board-item"><span class="pin"></span>Amanzimtoti</div>
+      <div class="board-item"><span class="pin"></span>Howick</div>
+      <div class="board-item"><span class="pin"></span>Newcastle</div>
+      <div class="board-item"><span class="pin"></span>Ladysmith</div>
+      <!-- duplicate for seamless loop -->
+      <div class="board-item"><span class="pin"></span>Durban</div>
+      <div class="board-item"><span class="pin"></span>Pietermaritzburg</div>
+      <div class="board-item"><span class="pin"></span>Umhlanga</div>
+      <div class="board-item"><span class="pin"></span>Ballito</div>
+      <div class="board-item"><span class="pin"></span>Pinetown</div>
+      <div class="board-item"><span class="pin"></span>Richards Bay</div>
+      <div class="board-item"><span class="pin"></span>Amanzimtoti</div>
+      <div class="board-item"><span class="pin"></span>Howick</div>
+      <div class="board-item"><span class="pin"></span>Newcastle</div>
+      <div class="board-item"><span class="pin"></span>Ladysmith</div>
+    </div>
+  </div>
+</section>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div>Built for spaza shops, salons, contractors &amp; consultants</div>
+    <div>Every site is mobile-first — most of your customers search on a phone</div>
+    <div>WhatsApp click-to-chat built into every website</div>
+    <div>We claim &amp; optimise your Google Business Profile ourselves</div>
+  </div>
+</div>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">What we build</span>
+      <h2>Three things every KZN business needs to be found locally.</h2>
+      <p>No bloated packages. Every project covers what actually moves the needle for a local business — a site people trust, a mark they recognise, and a listing that shows up when someone nearby searches for you.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="service-grid">
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 44 44" fill="none"><rect x="3" y="6" width="38" height="28" rx="2" stroke="#221B16" stroke-width="2.5"/><path d="M3 14H41" stroke="#221B16" stroke-width="2.5"/><circle cx="8" cy="10" r="1.3" fill="#221B16"/><circle cx="12.5" cy="10" r="1.3" fill="#221B16"/></svg>
+        <h3>Web Design</h3>
+        <p>A site that works as hard as your shopfront — built to load fast on data, not just Wi-Fi.</p>
+        <ul>
+          <li>Up to 5 pages, mobile-first</li>
+          <li>WhatsApp click-to-chat</li>
+          <li>Hosted &amp; handed over with the keys</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 44 44" fill="none"><circle cx="22" cy="22" r="16" stroke="#221B16" stroke-width="2.5"/><path d="M22 6 L26 18 L22 22 L18 18 Z" fill="#B85C2C"/></svg>
+        <h3>Logo Design</h3>
+        <p>A mark customers recognise on a taxi board, a gate sign, or your Facebook page.</p>
+        <ul>
+          <li>3 initial concepts</li>
+          <li>Brand colours &amp; fonts</li>
+          <li>Files ready for signage &amp; print</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <svg class="icon" viewBox="0 0 44 44" fill="none"><path d="M22 4C14 4 8 10 8 18C8 28 22 40 22 40C22 40 36 28 36 18C36 10 30 4 22 4Z" stroke="#221B16" stroke-width="2.5"/><circle cx="22" cy="18" r="5" stroke="#221B16" stroke-width="2.5"/></svg>
+        <h3>Google Business Profile + SEO</h3>
+        <p>So you show up in the map pack when someone searches "near me" in your town.</p>
+        <ul>
+          <li>Profile claimed &amp; fully set up</li>
+          <li>Keywords targeted to your town</li>
+          <li>Ongoing local search visibility</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="beadline"></div>
+
+<section id="process" class="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" style="color:var(--gold)">How it works</span>
+      <h2>From first message to live site in about a week.</h2>
+      <p>A real process, kept short on purpose — most local businesses can't wait a month for a website.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Brief</h3>
+        <p>A quick call or WhatsApp chat about your business, your town, and what you need.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Design</h3>
+        <p>Logo and site draft back to you in days — not weeks.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Build</h3>
+        <p>Site built, Google Business Profile claimed and optimised, content written for your area.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Launch</h3>
+        <p>Your site goes live, your listing goes live, and you get the login details — it's yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages" class="packages">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Launch pricing</span>
+      <h2>Fixed prices. No surprises.</h2>
+      <p>Straightforward packages for KZN businesses getting online for the first time — or finally getting found locally.</p>
+    </div>
+    <div class="pack-grid">
+      <div class="pack-card">
+        <span class="badge">First clients</span>
+        <h3>Starter Local</h3>
+        <div class="price">R1,500 <span>– R2,500</span></div>
+        <ul>
+          <li>Up to 5-page website</li>
+          <li>Basic on-page SEO</li>
+          <li>5–7 day turnaround</li>
+          <li>In exchange for a testimonial</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Claim this rate</a>
+      </div>
+      <div class="pack-card featured">
+        <h3>Growth</h3>
+        <div class="price">R3,000 <span>– R4,500</span></div>
+        <ul>
+          <li>Everything in Starter Local</li>
+          <li>Logo design included</li>
+          <li>Google Business Profile setup</li>
+          <li>Local keyword targeting</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get a free quote</a>
+      </div>
+      <div class="pack-card">
+        <h3>Established</h3>
+        <div class="price">R5,000 <span>– R8,000+</span></div>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Full brand identity</li>
+          <li>Ongoing SEO &amp; content</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Get a free quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap why-inner">
+    <div>
+      <h2>Why work with someone who knows KZN?</h2>
+      <p style="opacity:.85; font-size:0.98rem; max-width:44ch;">A template from an international marketplace doesn't know the difference between Umhlanga and Umlazi. We do — and so do your customers.</p>
+    </div>
+    <div class="why-list">
+      <div><span class="mark">01</span><p>We write copy and keywords for how people actually search in your town — not generic templates built for anywhere.</p></div>
+      <div><span class="mark">02</span><p>Every site is built assuming your customer is on data, on a small screen, and checking your hours before they call.</p></div>
+      <div><span class="mark">03</span><p>You reach us on WhatsApp. No tickets, no offshore call centre, no waiting three days for a reply.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="eyebrow">Let's get you found locally</span>
+    <h2 style="margin-top:14px;">Tell us about your business and your town.</h2>
+    <p>We'll come back with a fixed price and a realistic timeline — usually within a day.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/27000000000" class="btn btn-primary" target="_blank" rel="noopener">Message us on WhatsApp</a>
+      <a href="mailto:hello@afrotrendz.co.za" class="btn btn-ghost">Email us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">Afro<span class="dot" style="color:var(--gold)">Trendz</span></div>
+        <p style="opacity:.7; font-size:0.9rem; max-width:32ch; margin-top:10px;">Websites, logos and Google visibility for businesses across KwaZulu-Natal.</p>
+      </div>
+      <div class="foot-towns">
+        DURBAN · PIETERMARITZBURG · UMHLANGA · BALLITO · PINETOWN · RICHARDS BAY · AMANZIMTOTI · HOWICK · NEWCASTLE · LADYSMITH
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 AfroTrendz. Built in KZN.</span>
+      <span>hello@afrotrendz.co.za</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
